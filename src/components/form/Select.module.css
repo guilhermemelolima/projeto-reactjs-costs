@@ -1,0 +1,17 @@
+.input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.input label{
+    margin-bottom: .6em;
+    font-weight: bold;
+}
+
+.input select{
+    padding: .7em;
+    border-radius: 0;
+    border: none;
+}
+
