@@ -36,12 +36,11 @@ function ProjectForm({handleSubmit, btnText, projectData}) {
 
     function handleChangeCategory(e){
         setProject({...project,
-            // todo - o trecho abaixo está com erro, mas o logo após está funcionando
-            // category: {
-            //     id: e.target.value,
-            //     name: e.target.options[e.target.selectedIndex].text,
-            // },
-            category: e.target.value
+            category: {
+                id: e.target.value,
+                name: e.target.options[e.target.selectedIndex].text,
+            },
+            //category: e.target.value
         })
     }
 
