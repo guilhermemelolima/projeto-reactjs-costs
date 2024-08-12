@@ -1,34 +1,34 @@
-.footer{
-    background-color: #31363F;
-    color: #EEEEEE;
-    padding: 3em;
-    text-align: center;
+.footer {
+	background-color: #31363f;
+	color: #eeeeee;
+	padding: 3em;
+	text-align: center;
 }
 
 .social_list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+	list-style: none;
+	display: flex;
+	justify-content: center;
 }
 
-.social_list li{
-    margin: 0 1em;
+.social_list li {
+	margin: 0 1em;
 }
 
-.social_list li:hover{
-    color: #76ABAE;
+.social_list li:hover {
+	color: #ffbb33;
 }
 
-.social_list svg{
-    font-size: 1.5em;
-    cursor: pointer;
+.social_list svg {
+	font-size: 1.5em;
+	cursor: pointer;
 }
 
-.copy_rigth{
-    margin: 2em 0 0 0;
+.copy_rigth {
+	margin: 2em 0 0 0;
 }
 
-.copy_rigth span{
-    font-weight: bold;
-    color: #76ABAE;
+.copy_rigth span {
+	font-weight: bold;
+	color: #ffbb33;
 }

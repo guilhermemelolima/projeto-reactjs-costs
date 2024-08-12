@@ -15,16 +15,25 @@
     margin: 0 1em 0 0;
 }
 
+.item:hover{
+    transform: scale(1.1);
+}
+
 .item a {
     color: #EEEEEE;
     text-decoration: none;
     transition: 0.25s;
+    font-size: larger;
 }
 
 .item a:hover{
-    color: #76ABAE;
+    color: #ffbb33;
 }
 
 .navbar img{
-    width: 2em;
+    width: 3em;
+}
+
+.navbar img:hover{
+    transform: scale(1.1);
 }
