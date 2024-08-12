@@ -1,8 +1,9 @@
-
 function Empresa() {
-  return (
-    <h1>Empresa</h1>
-  )
+	return (
+		<div>
+			<h1>Empresa</h1>
+		</div>
+	);
 }
 
-export default Empresa
+export default Empresa;
