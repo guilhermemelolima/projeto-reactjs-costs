@@ -2,6 +2,7 @@ import styles from "./Project.module.css";
 
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { BsX, BsPencilFill, BsPlus } from "react-icons/bs";
 
 import Loading from "../layout/Loading";
 import Container from "../layout/Container";
@@ -12,6 +13,7 @@ function Project() {
 	const { id } = useParams();
 	const [project, setProject] = useState([]);
 	const [showProjectForm, setShowProjectForm] = useState(false);
+	const [showServiceForm, setShowServiceForm] = useState(false);
 	const [message, setMessage] = useState("");
 	const [type, setType] = useState("");
 
@@ -29,20 +31,12 @@ function Project() {
 		}, 300);
 	}, [id]);
 
-	// useEffect(() => {
-	// 	fetch(`http://localhost:5000/project/${id}`, {
-	// 		method: "GET",
-	// 		headers: {
-	// 			"Content-Type": "application/json",
-	// 		},
-	// 	})
-	// 		.then((resp) => resp.json())
-	// 		.then((data) => setProject(data))
-	// 		.catch((err) => console.log(err));
-	// }, [id]);
-
 	function toggleProjectForm() {
 		setShowProjectForm(!showProjectForm);
+	}
+
+	function toggleServiceForm() {
+		setShowServiceForm(!showServiceForm);
 	}
 
 	function editPost(project) {
@@ -83,7 +77,16 @@ function Project() {
 								onClick={toggleProjectForm}
 								className={styles.btn}
 							>
-								{!showProjectForm ? "Editar projeto" : "Fechar"}
+								{!showProjectForm ? (
+									<>
+										<BsPencilFill size={18} /> Editar
+										Projeto
+									</>
+								) : (
+									<>
+										<BsX size={24} /> Fechar
+									</>
+								)}
 							</button>
 							{!showProjectForm ? (
 								<div className={styles.project_info}>
@@ -110,6 +113,33 @@ function Project() {
 								</div>
 							)}
 						</div>
+						<div className={styles.service_form_container}>
+							<h2>Adicione um serviço:</h2>
+							<button
+								className={styles.btn}
+								onClick={toggleServiceForm}
+							>
+								{!showServiceForm ? (
+									<>
+										<BsPlus size={24} />
+										Adicionar serviço
+									</>
+								) : (
+									<>
+										<BsX size={24} /> Fechar
+									</>
+								)}
+							</button>
+							<div className={styles.project_info}>
+								{showServiceForm && (
+									<div>formulário do serviço</div>
+								)}
+							</div>
+						</div>
+						<h2>Serviços</h2>
+						<Container customClass="start">
+							<p>Itens de serviço</p>
+						</Container>
 					</Container>
 				</div>
 			) : (
