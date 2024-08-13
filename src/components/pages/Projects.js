@@ -20,7 +20,6 @@ function Projects() {
 		message = location.state.message;
 	}
 
-	// fazendo o loader aprecer de forma forçada usando o Timeout
 	useEffect(() => {
 		setTimeout(() => {
 			fetch("http://localhost:5000/projects", {
@@ -37,22 +36,6 @@ function Projects() {
 				.catch((err) => console.log(err));
 		}, 300);
 	}, []);
-
-	// fazendo o loader aparecer de acordo com o tempo da API
-	// useEffect(() => {
-	//   fetch('http://localhost:5000/project',{
-	//     method: 'GET',
-	//     headers: {
-	//       'Content-Type': 'application/json',
-	//     },
-	//   })
-	//   .then((resp) => resp.json())
-	//   .then((data) => {
-	//     setProjects(data)
-	//     setRemoveLoading(true)
-	//   })
-	//   .catch((err) => console.log(err))
-	// }, [])
 
 	function removeProject(id) {
 		fetch(`http://localhost:5000/projects/${id}`, {
