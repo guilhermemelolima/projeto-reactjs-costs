@@ -19,16 +19,23 @@
       },
       "name": "Projeto Infra",
       "budget": "1000",
-      "cost": 0,
-      "services": []
+      "cost": 100,
+      "services": [
+        {
+          "name": "test",
+          "cost": "100",
+          "description": "test",
+          "id": "171808b8-3173-445c-968b-728c01805f6c"
+        }
+      ]
     },
     {
-      "id": "3b53",
-      "name": "Projeto Desenvolvimento",
-      "budget": "900",
+      "id": "2713",
+      "name": "test",
+      "budget": "6000",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "1",
+        "name": "Infra"
       },
       "cost": 0,
       "services": []
