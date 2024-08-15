@@ -1,4 +1,4 @@
-import { parse, v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
 import styles from "./Project.module.css";
 
@@ -71,7 +71,31 @@ function Project() {
 			.catch((err) => console.log(err));
 	}
 
-	function removeService() {}
+	function removeService(id, cost) {
+		const servicesUpdated = project.services.filter(
+			(service) => service.id !== id
+		);
+
+		const projectUpdate = project;
+		projectUpdate.services = servicesUpdated;
+		projectUpdate.cost = parseFloat(projectUpdate.cost) - parseFloat(cost);
+
+		fetch(`http://localhost:5000/projects/${projectUpdate.id}`, {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(projectUpdate),
+		})
+			.then((resp) => resp.json())
+			.then((data) => {
+				setProject(projectUpdate);
+				setServices(servicesUpdated);
+				setMessage("Serviço removido com sucesso!");
+				setType("success");
+			})
+			.catch((err) => console.log(err));
+	}
 
 	function toggleProjectForm() {
 		setShowProjectForm(!showProjectForm);

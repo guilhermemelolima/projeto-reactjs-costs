@@ -28,17 +28,6 @@
           "id": "171808b8-3173-445c-968b-728c01805f6c"
         }
       ]
-    },
-    {
-      "id": "2713",
-      "name": "test",
-      "budget": "6000",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
     }
   ],
   "categories": [
