@@ -1,0 +1,54 @@
+.empresa_container {
+	max-width: 900px;
+	margin: 40px auto;
+	padding: 20px;
+	background-color: #f9f9f9;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+
+h1 {
+	color: #2c3e50;
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+h2 {
+	color: #34495e;
+	font-size: 28px;
+	margin-top: 30px;
+	margin-bottom: 15px;
+	border-bottom: 2px solid #3498db;
+	display: inline-block;
+	padding-bottom: 5px;
+}
+
+p {
+	color: #555;
+	font-size: 18px;
+	line-height: 1.8;
+	margin-bottom: 20px;
+}
+
+ul {
+	list-style-type: disc;
+	margin-left: 40px;
+	margin-bottom: 20px;
+}
+
+li {
+	color: #555;
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 10px;
+}
+
+strong {
+	color: #3498db;
+}
+
+h2 span {
+	color: #3498db;
+}
